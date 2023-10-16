@@ -13,26 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StasIvanExKitchen
+namespace StasIvanExKitchen.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Autorisation.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Autorisation : Page
     {
-        public MainWindow()
+        public Autorisation()
         {
             InitializeComponent();
-            Classes.AppFrame.MainFrame = MainFrame;
-            Classes.AppFrame.MainFrame.Navigate(new Pages.Autorisation());
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnVhodGost_Click(object sender, RoutedEventArgs e)
+        private void Vhod_Click(object sender, RoutedEventArgs e)
         {
 
         }
