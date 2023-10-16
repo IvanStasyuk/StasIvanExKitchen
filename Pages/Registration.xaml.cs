@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace StasIvanExKitchen.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Autorisation.xaml
+    /// Логика взаимодействия для Registration.xaml
     /// </summary>
-    public partial class Autorisation : Page
+    public partial class Registration : Page
     {
-        public Autorisation()
+        public Registration()
         {
             InitializeComponent();
-        }
-
-        private void Vhod_Click(object sender, RoutedEventArgs e)
-        {
-            Classes.AppFrame.MainFrame.Navigate(new Pages.ProductsKitchen());
         }
     }
 }

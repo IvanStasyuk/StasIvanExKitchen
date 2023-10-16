@@ -29,12 +29,25 @@ namespace StasIvanExKitchen
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-
+            Classes.AppFrame.MainFrame.GoBack();
         }
 
         private void btnVhodGost_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("Добро пожаловать, гость!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+            Classes.AppFrame.MainFrame.Navigate(new Pages.ProductsKitchen());
+        }
 
+        private void MainFrame_ContentRendered(object sender, EventArgs e)
+        {
+            if (Classes.AppFrame.MainFrame.CanGoBack)
+            {
+                btnBack.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                btnBack.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

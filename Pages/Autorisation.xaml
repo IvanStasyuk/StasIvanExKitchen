@@ -34,7 +34,7 @@
         <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Orientation="Vertical" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Введите капчу: "></TextBlock>
-                <TextBox Text="ABCDEF" Background="LightGray"></TextBox>
+                <TextBox Text="ABCDEF" Background="LightGray" IsEnabled="False"></TextBox>
             </StackPanel>
             <TextBox x:Name="CaptchaInput"></TextBox>
         </StackPanel>
