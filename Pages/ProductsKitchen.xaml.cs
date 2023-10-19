@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StasIvanExKitchen.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,30 @@ namespace StasIvanExKitchen.Pages
         public ProductsKitchen()
         {
             InitializeComponent();
+        }
+
+        private void btnEditTovar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                TradeEntitiesKitchen.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                DataGridKitchen.ItemsSource = TradeEntitiesKitchen.GetContext().Product.ToList();
+            }
         }
     }
 }

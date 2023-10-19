@@ -9,6 +9,40 @@
       Title="Registration">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.RowSpan="2" Width="120">
+            <TextBlock Text="Фамилия" Margin="5"></TextBlock>
+            <TextBlock Text="Имя" Margin="5"></TextBlock>
+            <TextBlock Text="Отчество" Margin="3"></TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <TextBlock Text="Логин" Margin="5"></TextBlock>
+            <TextBlock Text="Пароль" Margin="5"></TextBlock>
+            <TextBlock Text="Роль" Margin="3"></TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <TextBox x:Name="FamiliaBox" Margin="7"></TextBox>
+            <TextBox x:Name="NameBox" Margin="2"></TextBox>
+            <TextBox x:Name="PatronymicBox" Margin="8"></TextBox>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <TextBox x:Name="LoginBox" Margin="7"></TextBox>
+            <TextBox x:Name="PasswordBox" Margin="2"></TextBox>
+            <TextBox x:Name="RolePeople" Margin="8"></TextBox>
+        </StackPanel>
+        <Button x:Name="btnCreate" Content="Создать" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="1" Click="btnCreate_Click" Style="{StaticResource Save}"></Button>
     </Grid>
 </Page>

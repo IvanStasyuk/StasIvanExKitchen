@@ -15,6 +15,13 @@ namespace StasIvanExKitchen.Classes
     
     public partial class TradeEntitiesKitchen : DbContext
     {
+        private static TradeEntitiesKitchen _context;
+        public static TradeEntitiesKitchen GetContext()
+        {
+            if (_context == null)
+                _context = new TradeEntitiesKitchen();
+            return _context;
+        }
         public TradeEntitiesKitchen()
             : base("name=TradeEntitiesKitchen")
         {

@@ -33,7 +33,7 @@
                 <Setter Property="Height" Value="20"></Setter>
                 <Setter Property="Width" Value="120"></Setter>
                 <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
-                <Setter Property="FontSize" Value="12"></Setter>
+                <Setter Property="FontSize" Value="15"></Setter>
                 <Setter Property="FontWeight" Value="Bold"></Setter>
                 <Setter Property="HorizontalAlignment" Value="Center"></Setter>
                 <Setter Property="VerticalAlignment" Value="Center"></Setter>
@@ -44,7 +44,7 @@
                 <Setter Property="Height" Value="20"></Setter>
                 <Setter Property="Width" Value="120"></Setter>
                 <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
-                <Setter Property="FontSize" Value="12"></Setter>
+                <Setter Property="FontSize" Value="15"></Setter>
                 <Setter Property="FontWeight" Value="Bold"></Setter>
                 <Setter Property="HorizontalAlignment" Value="Center"></Setter>
                 <Setter Property="VerticalAlignment" Value="Center"></Setter>
@@ -56,7 +56,7 @@
                 <Setter Property="Height" Value="20"></Setter>
                 <Setter Property="Width" Value="120"></Setter>
                 <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
-                <Setter Property="FontSize" Value="12"></Setter>
+                <Setter Property="FontSize" Value="15"></Setter>
                 <Setter Property="FontWeight" Value="Bold"></Setter>
                 <Setter Property="HorizontalAlignment" Value="Center"></Setter>
                 <Setter Property="VerticalAlignment" Value="Center"></Setter>
@@ -68,7 +68,7 @@
                 <Setter Property="Height" Value="20"></Setter>
                 <Setter Property="Width" Value="120"></Setter>
                 <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
-                <Setter Property="FontSize" Value="12"></Setter>
+                <Setter Property="FontSize" Value="15"></Setter>
                 <Setter Property="FontWeight" Value="Bold"></Setter>
                 <Setter Property="HorizontalAlignment" Value="Center"></Setter>
                 <Setter Property="VerticalAlignment" Value="Center"></Setter>

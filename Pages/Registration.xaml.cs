@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StasIvanExKitchen.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,35 @@ namespace StasIvanExKitchen.Pages
         public Registration()
         {
             InitializeComponent();
+        }
+
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
+        {
+            if (Classes.AppConnect.modelTrade.User.Count(y => y.UserLogin == LoginBox.Text) > 0)
+            {
+                MessageBox.Show("Пользователь уже существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            try
+            {
+                User userBDJ = new User()
+                {
+                    UserLogin = LoginBox.Text,
+                    UserPassword = PasswordBox.Text,
+                    UserSurname = FamiliaBox.Text,
+                    UserName = NameBox.Text,
+                    UserPatronymic = PatronymicBox.Text,
+                    UserRole = int.Parse(RolePeople.Text)
+                };
+                Classes.AppConnect.modelTrade.User.Add(userBDJ);
+                Classes.AppConnect.modelTrade.SaveChanges();
+                MessageBox.Show("Данные добавлены", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при добавлении данных!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
     }
 }
