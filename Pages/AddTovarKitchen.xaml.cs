@@ -65,7 +65,6 @@ namespace StasIvanExKitchen.Pages
             }
             if (AddingTovar == null)
             {
-                MessageBox.Show("Информация сохранена");
                 TradeEntitiesKitchen.GetContext().Product.Add(AddingTovar);
             }
             try
