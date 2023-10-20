@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="fd971f2fcf95446e815bf059d2233855" Name="Diagram1">
         <EntityTypeShape EntityType="TradeModel.Order" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="TradeModel.Product" Width="1.5" PointX="5.125" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="TradeModel.Product" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="TradeModel.Role" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="TradeModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="TradeModel.FK__User__UserRole__267ABA7A" ManuallyRouted="false" />

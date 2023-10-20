@@ -25,14 +25,6 @@ namespace StasIvanExKitchen.Classes
         public string ProductDescription { get; set; }
         public string ProductCategory { get; set; }
         public byte[] ProductPhoto { get; set; }
-
-        public string ProductImage
-        {
-            get
-            {
-                return "/Resources/" + ProductPhoto;
-            }
-        }
         public string ProductManufacturer { get; set; }
         public decimal ProductCost { get; set; }
         public Nullable<int> ProductMaxDiscount { get; set; }

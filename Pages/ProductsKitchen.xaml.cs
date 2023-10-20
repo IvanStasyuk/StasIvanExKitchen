@@ -28,17 +28,32 @@ namespace StasIvanExKitchen.Pages
 
         private void btnEditTovar_Click(object sender, RoutedEventArgs e)
         {
-
+            AppFrame.MainFrame.Navigate(new Pages.AddTovarKitchen((sender as Button).DataContext as Product));
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            AppFrame.MainFrame.Navigate(new Pages.AddTovarKitchen(null));
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            var tovarRemoving = DataGridKitchen.SelectedItems.Cast<Product>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить {tovarRemoving.Count()} элементов",
+                "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    TradeEntitiesKitchen.GetContext().Product.RemoveRange(tovarRemoving);
+                    TradeEntitiesKitchen.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены");
+                    DataGridKitchen.ItemsSource = TradeEntitiesKitchen.GetContext().Product.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
