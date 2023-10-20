@@ -36,7 +36,7 @@ namespace StasIvanExKitchen.Pages
             MessageBox.Show(sb.ToString());
             try
             {
-                var _currectUser = AppConnect.modelTrade.User.FirstOrDefault(q => q.UserLogin == Login.Text);
+                var _currectUser = AppConnect.modelTrade.User.FirstOrDefault(q => q.UserLogin == Login.Text && q.UserPassword == Password.Text);
                 if (_currectUser == null)
                 {
                     MessageBox.Show("Такого пользователя нет!", "Ошибка при авторизации!", MessageBoxButton.OK, MessageBoxImage.Error);
