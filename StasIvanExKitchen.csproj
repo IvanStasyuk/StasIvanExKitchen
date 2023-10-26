@@ -73,7 +73,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Classes\AppConnect.cs" />
     <Compile Include="Classes\AppFrame.cs" />
     <Compile Include="Classes\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -217,6 +216,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="TextFile1.txt" />
     <Resource Include="Resources\icon.ico" />
     <Resource Include="Resources\logo.png" />
   </ItemGroup>

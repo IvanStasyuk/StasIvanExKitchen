@@ -43,10 +43,12 @@ namespace StasIvanExKitchen
             if (Classes.AppFrame.MainFrame.CanGoBack)
             {
                 btnBack.Visibility = Visibility.Visible;
+                btnVhodGost.Visibility = Visibility.Hidden;
             }
             else
             {
                 btnBack.Visibility = Visibility.Hidden;
+                btnVhodGost.Visibility = Visibility.Visible;
             }
         }
     }

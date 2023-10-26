@@ -31,39 +31,39 @@ namespace StasIvanExKitchen.Pages
         private void SavebtnTovar_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
-            var _currectProduct = AppConnect.modelTrade.Product.FirstOrDefault();//q => q.ProductArticleNumber = byte.Parse(ArticleAddBox.Text) && q.ProductName == NameAddBox.Text && q.ProductDescription == DescriptionAddBox.Text && q.ProductCategory == CategoryAddBox.Text && q.ProductPhoto = bool.Parse(PhotoAddBox.Text) && q.ProductManufacturer == ManufacturerAddBox.Text && q.ProductCost == int.Parse(CostAddBox.Text) && q.ProductMaxDiscount == int.Parse(MaxDiscountAddBox.Text) && q.ProductDiscountAmount == int.Parse(DiscountAmountAddBox.Text) && q.ProductQuantityInStock == int.Parse(QuantityInStockAddBox.Text) && q.ProductProvider == ProviderAddBox.Text && q.ProductUnit == UnitAddBox.Text && q.ProductStatus == StatusAddBox.Text);
-            if (string.IsNullOrEmpty(_currectProduct.ProductArticleNumber))
+
+            if (string.IsNullOrEmpty(AddingTovar.ProductArticleNumber))
                 errors.AppendLine("Укажите артикул товара");
-            if (string.IsNullOrEmpty(_currectProduct.ProductName))
+            if (string.IsNullOrEmpty(AddingTovar.ProductName))
                 errors.AppendLine("Укажите название товара");
-            if (string.IsNullOrEmpty(_currectProduct.ProductDescription))
+            if (string.IsNullOrEmpty(AddingTovar.ProductDescription))
                 errors.AppendLine("Укажите описание товара");
-            if (string.IsNullOrEmpty(_currectProduct.ProductCategory))
+            if (string.IsNullOrEmpty(AddingTovar.ProductCategory))
                 errors.AppendLine("Укажите категорию товара");
-            if (_currectProduct.ProductPhoto == null)
+            if (AddingTovar.ProductPhoto == null)
                 errors.AppendLine("Укажите фотографию товара");
-            if (string.IsNullOrEmpty(_currectProduct.ProductManufacturer))
+            if (string.IsNullOrEmpty(AddingTovar.ProductManufacturer))
                 errors.AppendLine("Укажите производителя товара");
-            if (_currectProduct.ProductCost <= 0)
+            if (AddingTovar.ProductCost <= 0)
                 errors.AppendLine("Цена не может быть меньше 0");
-            if (_currectProduct.ProductMaxDiscount <= 0)
+            if (AddingTovar.ProductMaxDiscount <= 0)
                 errors.AppendLine("Максимальная скидка не может быть меньше 0");
-            if (_currectProduct.ProductDiscountAmount <= 0)
+            if (AddingTovar.ProductDiscountAmount <= 0)
                 errors.AppendLine("Скидка не может быть меньше 0");
-            if (_currectProduct.ProductQuantityInStock <= 0)
+            if (AddingTovar.ProductQuantityInStock <= 0)
                 errors.AppendLine("Должен храниться как минимум 1 товар");
-            if (_currectProduct.ProductProvider == null)
+            if (AddingTovar.ProductProvider == null)
                 errors.AppendLine("Укажите заказчика");
-            if (_currectProduct.ProductUnit == null)
+            if (AddingTovar.ProductUnit == null)
                 errors.AppendLine("Укажите единицу измерения");
-            if (string.IsNullOrEmpty(_currectProduct.ProductStatus))
+            if (string.IsNullOrEmpty(AddingTovar.ProductStatus))
                 errors.AppendLine("Укажите статус товара");
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
                 return;
             }
-            if (AddingTovar == null)
+            if (AddingTovar.ProductCost > 0)
             {
                 TradeEntitiesKitchen.GetContext().Product.Add(AddingTovar);
             }

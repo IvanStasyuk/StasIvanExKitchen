@@ -1,0 +1,34 @@
+﻿try
+            {
+                var _currectUser = AppConnect.modelTrade.User.FirstOrDefault(q => q.UserLogin == Login.Text && q.UserPassword == Password.Text);
+                if (_currectUser == null)
+                {
+                    MessageBox.Show("Такого пользователя нет!", "Ошибка при авторизации!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    switch (_currectUser.UserRole)
+                    {
+                        case 1:
+                            MessageBox.Show("Здравствуй, Администратор " + _currectUser.UserLogin + "!", "Авторизация", MessageBoxButton.OK, MessageBoxImage.Information);
+                            break;
+                        case 2:
+                            MessageBox.Show("Здравствуй, Менеджер " + _currectUser.UserLogin + "!", "Авторизация", MessageBoxButton.OK, MessageBoxImage.Information);
+                            break;
+                        case 3:
+                            MessageBox.Show("Здравствуй, Клиент " + _currectUser.UserLogin + "!", "Авторизация", MessageBoxButton.OK, MessageBoxImage.Information);
+                            break;
+                        default:
+                            MessageBox.Show("Данные не обнаружены " + _currectUser.UserLogin + "!", "Авторизация", MessageBoxButton.OK, MessageBoxImage.Information);
+                            break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка " + ex.Message.ToString() + "Критическая работа приложения!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+
+
+var _currectProduct = AppConnect.modelTrade.Product.FirstOrDefault(q => q.ProductArticleNumber = byte.Parse(ArticleAddBox.Text) || q.ProductName == NameAddBox.Text && q.ProductDescription == DescriptionAddBox.Text && q.ProductCategory == CategoryAddBox.Text && q.ProductPhoto = bool.Parse(PhotoAddBox.Text) && q.ProductManufacturer == ManufacturerAddBox.Text && q.ProductCost == int.Parse(CostAddBox.Text) && q.ProductMaxDiscount == int.Parse(MaxDiscountAddBox.Text) && q.ProductDiscountAmount == int.Parse(DiscountAmountAddBox.Text) && q.ProductQuantityInStock == int.Parse(QuantityInStockAddBox.Text) && q.ProductProvider == ProviderAddBox.Text && q.ProductUnit == UnitAddBox.Text && q.ProductStatus == StatusAddBox.Text);-

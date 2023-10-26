@@ -28,7 +28,7 @@ namespace StasIvanExKitchen.Pages
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
-            if (Classes.AppConnect.modelTrade.User.Count(y => y.UserLogin == LoginBox.Text) > 0)
+            if (TradeEntitiesKitchen.GetContext().User.Count(y => y.UserLogin == LoginBox.Text) > 0)
             {
                 MessageBox.Show("Пользователь уже существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -44,8 +44,8 @@ namespace StasIvanExKitchen.Pages
                     UserPatronymic = PatronymicBox.Text,
                     UserRole = int.Parse(RolePeople.Text)
                 };
-                Classes.AppConnect.modelTrade.User.Add(userBDJ);
-                Classes.AppConnect.modelTrade.SaveChanges();
+                TradeEntitiesKitchen.GetContext().User.Add(userBDJ);
+                TradeEntitiesKitchen.GetContext().SaveChanges();
                 MessageBox.Show("Данные добавлены", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch

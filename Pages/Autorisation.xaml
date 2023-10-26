@@ -29,7 +29,7 @@
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" Margin="80,0,80,0">
             <TextBox x:Name="Login" Margin="0"></TextBox>
-            <TextBox x:Name="Password" Margin="18"></TextBox>
+            <TextBox x:Name="Password" Margin="15"></TextBox>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Orientation="Vertical" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
