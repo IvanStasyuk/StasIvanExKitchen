@@ -61,5 +61,6 @@
         </DataGrid>
         <Button x:Name="btnAdd" Content="Добавить" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" Style="{StaticResource Save}" Click="btnAdd_Click"></Button>
         <Button x:Name="btnDelete" Content="Удалить" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="4" Style="{StaticResource Delete}" Click="btnDelete_Click"></Button>
+        <Button x:Name="btnOrders" Content="Заказы" Grid.Column="4" Grid.Row="4" Click="btnOrders_Click"></Button>
     </Grid>
 </Page>

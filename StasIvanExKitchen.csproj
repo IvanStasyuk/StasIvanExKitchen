@@ -105,11 +105,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AddOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AddTovarKitchen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Autorisation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OrdersMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -123,11 +131,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AddOrder.xaml.cs">
+      <DependentUpon>AddOrder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AddTovarKitchen.xaml.cs">
       <DependentUpon>AddTovarKitchen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Autorisation.xaml.cs">
       <DependentUpon>Autorisation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrdersMain.xaml.cs">
+      <DependentUpon>OrdersMain.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProductsKitchen.xaml.cs">
       <DependentUpon>ProductsKitchen.xaml</DependentUpon>

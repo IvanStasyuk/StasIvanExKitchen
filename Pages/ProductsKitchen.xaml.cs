@@ -64,5 +64,10 @@ namespace StasIvanExKitchen.Pages
                 DataGridKitchen.ItemsSource = TradeEntitiesKitchen.GetContext().Product.ToList();
             }
         }
+
+        private void btnOrders_Click(object sender, RoutedEventArgs e)
+        {
+            AppFrame.MainFrame.Navigate(new OrdersMain());
+        }
     }
 }
