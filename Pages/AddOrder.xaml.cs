@@ -27,7 +27,6 @@ namespace StasIvanExKitchen.Pages
             InitializeComponent();
             DataContext = AddingOrder;
         }
-
         private void SavebtnOrder_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();

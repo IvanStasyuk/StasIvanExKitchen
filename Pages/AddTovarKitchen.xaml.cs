@@ -32,31 +32,31 @@ namespace StasIvanExKitchen.Pages
         {
             StringBuilder errors = new StringBuilder();
 
-            if (string.IsNullOrEmpty(AddingTovar.ProductArticleNumber))
+            if (string.IsNullOrEmpty(ArticleAddBox.Text))
                 errors.AppendLine("Укажите артикул товара");
-            if (string.IsNullOrEmpty(AddingTovar.ProductName))
+            if (string.IsNullOrEmpty(NameAddBox.Text))
                 errors.AppendLine("Укажите название товара");
-            if (string.IsNullOrEmpty(AddingTovar.ProductDescription))
+            if (string.IsNullOrEmpty(DescriptionAddBox.Text))
                 errors.AppendLine("Укажите описание товара");
-            if (string.IsNullOrEmpty(AddingTovar.ProductCategory))
+            if (string.IsNullOrEmpty(CategoryAddBox.Text))
                 errors.AppendLine("Укажите категорию товара");
-            if (AddingTovar.ProductPhoto == null)
+            if (PhotoAddBox.Text == null)
                 errors.AppendLine("Укажите фотографию товара");
-            if (string.IsNullOrEmpty(AddingTovar.ProductManufacturer))
+            if (string.IsNullOrEmpty(ManufacturerAddBox.Text))
                 errors.AppendLine("Укажите производителя товара");
-            if (AddingTovar.ProductCost <= 0)
+            if (int.Parse(CostAddBox.Text) <= 0)
                 errors.AppendLine("Цена не может быть меньше 0");
-            if (AddingTovar.ProductMaxDiscount <= 0)
+            if (int.Parse(MaxDiscountAddBox.Text) <= 0)
                 errors.AppendLine("Максимальная скидка не может быть меньше 0");
-            if (AddingTovar.ProductDiscountAmount <= 0)
+            if (int.Parse(DiscountAmountAddBox.Text) <= 0)
                 errors.AppendLine("Скидка не может быть меньше 0");
-            if (AddingTovar.ProductQuantityInStock <= 0)
+            if (int.Parse(QuantityInStockAddBox.Text) <= 0)
                 errors.AppendLine("Должен храниться как минимум 1 товар");
-            if (AddingTovar.ProductProvider == null)
+            if (string.IsNullOrEmpty(ProviderAddBox.Text))
                 errors.AppendLine("Укажите заказчика");
-            if (AddingTovar.ProductUnit == null)
+            if (string.IsNullOrEmpty(UnitAddBox.Text))
                 errors.AppendLine("Укажите единицу измерения");
-            if (string.IsNullOrEmpty(AddingTovar.ProductStatus))
+            if (string.IsNullOrEmpty(StatusAddBox.Text))
                 errors.AppendLine("Укажите статус товара");
             if (errors.Length > 0)
             {
