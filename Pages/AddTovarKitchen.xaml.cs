@@ -40,7 +40,7 @@ namespace StasIvanExKitchen.Pages
                 errors.AppendLine("Укажите описание товара");
             if (string.IsNullOrEmpty(CategoryAddBox.Text))
                 errors.AppendLine("Укажите категорию товара");
-            if (PhotoAddBox.Text == null)
+            if (string.IsNullOrEmpty(PhotoAddBox.Text))
                 errors.AppendLine("Укажите фотографию товара");
             if (string.IsNullOrEmpty(ManufacturerAddBox.Text))
                 errors.AppendLine("Укажите производителя товара");

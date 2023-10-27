@@ -31,23 +31,22 @@ namespace StasIvanExKitchen.Pages
         {
             StringBuilder errors = new StringBuilder();
 
-            if (AddingOrder.NumberOrder <= 0)
+            if (string.IsNullOrEmpty(NomerOrder.Text))
                 errors.AppendLine("Номер заказа не может быть меньше 0");
-            if (string.IsNullOrEmpty(AddingOrder.SostavOrder))
+            if (string.IsNullOrEmpty(SostavOrder.Text))
                 errors.AppendLine("Укажите состав заказа");
-            //if (DateTime.Parse(AddingOrder.OrderDate != true))
-                //errors.AppendLine("Укажите дату заказа");
-            //if (DateTime.Parse(AddingOrder.OrderDeliveryDate.Year.ToString()) > DateTime.Now)
-                //errors.AppendLine("Укажите дату доставки заказа");
-            if (string.IsNullOrEmpty(AddingOrder.OrderPickupPoint))
+            if (string.IsNullOrEmpty(DataofOrder.Text))
+                errors.AppendLine("Укажите дату заказа");
+            if (string.IsNullOrEmpty(DataDeliveryofOrder.Text))
+                errors.AppendLine("Укажите дату доставки заказа");
+            if (string.IsNullOrEmpty(PickUpOrder.Text))
                 errors.AppendLine("Укажите пункт выдачи заказа");
-            if (string.IsNullOrEmpty(AddingOrder.FioUser))
+            if (string.IsNullOrEmpty(FIOOrder.Text))
                 errors.AppendLine("Укажите ФИО заказчика заказа");
-            if (AddingOrder.CodeEnter <= 0)
+            if (string.IsNullOrEmpty(EnterCodeOrder.Text))
                 errors.AppendLine("Код выдачи не может быть меньше 0");
-            if (string.IsNullOrEmpty(AddingOrder.OrderStatus))
+            if (string.IsNullOrEmpty(StatusOrder.Text))
                 errors.AppendLine("Укажите статус заказа");
-
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());

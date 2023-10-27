@@ -42,19 +42,19 @@
         <TextBlock Text="Заказчик" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="3" Grid.RowSpan="2"></TextBlock>
         <TextBlock Text="Единица" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="4" Grid.RowSpan="2"></TextBlock>
         <TextBlock Text="Статус" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="5" Grid.RowSpan="2"></TextBlock>
-        <TextBox x:Name="ArticleAddBox" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="NameAddBox" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="DescriptionAddBox" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="CategoryAddBox" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="PhotoAddBox" Grid.Column="1" Grid.Row="4" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="ManufacturerAddBox" Grid.Column="1" Grid.Row="5" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="CostAddBox" Grid.Column="1" Grid.Row="6" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="MaxDiscountAddBox" Grid.Column="3" Grid.Row="0" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="DiscountAmountAddBox" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="QuantityInStockAddBox" Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="ProviderAddBox" Grid.Column="3" Grid.Row="3" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="UnitAddBox" Grid.Column="3" Grid.Row="4" Grid.RowSpan="2"></TextBox>
-        <TextBox x:Name="StatusAddBox" Grid.Column="3" Grid.Row="5" Grid.RowSpan="2"></TextBox>
+        <TextBox x:Name="ArticleAddBox" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Text="{Binding ProductArticleNumber}"></TextBox>
+        <TextBox x:Name="NameAddBox" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Text="{Binding ProductName}"></TextBox>
+        <TextBox x:Name="DescriptionAddBox" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Text="{Binding ProductDescription}"></TextBox>
+        <TextBox x:Name="CategoryAddBox" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" Text="{Binding ProductCategory}"></TextBox>
+        <TextBox x:Name="PhotoAddBox" Grid.Column="1" Grid.Row="4" Grid.RowSpan="2" Text="{Binding ProductPhoto}"></TextBox>
+        <TextBox x:Name="ManufacturerAddBox" Grid.Column="1" Grid.Row="5" Grid.RowSpan="2" Text="{Binding ProductManufacturer}"></TextBox>
+        <TextBox x:Name="CostAddBox" Grid.Column="1" Grid.Row="6" Grid.RowSpan="2" Text="{Binding ProductCost}"></TextBox>
+        <TextBox x:Name="MaxDiscountAddBox" Grid.Column="3" Grid.Row="0" Grid.RowSpan="2" Text="{Binding ProductMaxDiscount}"></TextBox>
+        <TextBox x:Name="DiscountAmountAddBox" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Text="{Binding ProductDiscountAmount}"></TextBox>
+        <TextBox x:Name="QuantityInStockAddBox" Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" Text="{Binding ProductQuantityInStock}"></TextBox>
+        <TextBox x:Name="ProviderAddBox" Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" Text="{Binding ProductProvider}"></TextBox>
+        <TextBox x:Name="UnitAddBox" Grid.Column="3" Grid.Row="4" Grid.RowSpan="2" Text="{Binding ProductUnit}"></TextBox>
+        <TextBox x:Name="StatusAddBox" Grid.Column="3" Grid.Row="5" Grid.RowSpan="2" Text="{Binding ProductStatus}"></TextBox>
         <Button x:Name="SavebtnTovar" Content="Сохранить" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="11" Style="{StaticResource Save}" Click="SavebtnTovar_Click"></Button>
     </Grid>
 </Page>
