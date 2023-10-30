@@ -24,6 +24,51 @@ namespace StasIvanExKitchen.Pages
         public OrdersMain()
         {
             InitializeComponent();
+            if (AppFrame._currentUser == null)
+            {
+                btnAddOrder.IsEnabled = false;
+                btnAddOrder.ToolTip = "У вас нет прав";
+                btnDeleteOrder.IsEnabled = false;
+                btnDeleteOrder.ToolTip = "У вас нет прав";
+            }
+            //
+            else
+            {
+                try
+                {
+                    switch (AppFrame._currentUser.UserRole)
+                    {
+                        case 1:
+                            btnAddOrder.IsEnabled = true;
+                            btnAddOrder.ToolTip = "У вас нет прав";
+                            btnDeleteOrder.IsEnabled = true;
+                            btnDeleteOrder.ToolTip = "У вас нет прав";
+                            break;
+                        case 2:
+                            btnAddOrder.IsEnabled = false;
+                            btnAddOrder.ToolTip = "У вас нет прав";
+                            btnDeleteOrder.IsEnabled = true;
+                            btnDeleteOrder.ToolTip = "У вас нет прав";
+                            break;
+                        case 3:
+                            btnAddOrder.IsEnabled = true;
+                            btnAddOrder.ToolTip = "У вас нет прав";
+                            btnDeleteOrder.IsEnabled = false;
+                            btnDeleteOrder.ToolTip = "У вас нет прав";
+                            break;
+                        default:
+                            btnAddOrder.IsEnabled = false;
+                            btnAddOrder.ToolTip = "У вас нет прав";
+                            btnDeleteOrder.IsEnabled = false;
+                            btnDeleteOrder.ToolTip = "У вас нет прав";
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка" + ex.Message.ToString() + "Критическая ошибка приложения", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)

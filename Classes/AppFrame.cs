@@ -10,5 +10,8 @@ namespace StasIvanExKitchen.Classes
     internal class AppFrame
     {
         public static Frame MainFrame;
+
+        public static User _currentUser;
+ 
     }
 }

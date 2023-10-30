@@ -43,8 +43,9 @@ namespace StasIvanExKitchen.Pages
                 }
                 else if (CaptchaInput.Text == "ABCDEF")
                 {
-                    MessageBox.Show("Капча верна", "Ошибка авторизации", MessageBoxButton.OK, MessageBoxImage.Information);
-                   
+                    MessageBox.Show("Капча верна", "Авторизация успешна", MessageBoxButton.OK, MessageBoxImage.Information);
+                    AppFrame._currentUser = UserObj;
+
                     switch (UserObj.UserRole)
                     {
                         case 1:

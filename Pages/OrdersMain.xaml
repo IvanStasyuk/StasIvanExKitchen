@@ -35,7 +35,7 @@
                 <DataGridTextColumn Header="Статус заказа" Width="110" Binding="{Binding OrderStatus}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnAddOrder" Content="Добавить" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" Style="{StaticResource Save}" Click="btnAddOrder_Click" ></Button>
-        <Button x:Name="btnDeleteOrder" Content="Удалить" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="4" Style="{StaticResource Delete}" Click="btnDeleteOrder_Click"></Button>
+        <Button x:Name="btnAddOrder" ToolTipService.ShowOnDisabled="True" Content="Добавить" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" Style="{StaticResource Save}" Click="btnAddOrder_Click" ></Button>
+        <Button x:Name="btnDeleteOrder" ToolTipService.ShowOnDisabled="True" Content="Удалить" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="4" Style="{StaticResource Delete}" Click="btnDeleteOrder_Click"></Button>
     </Grid>
 </Page>
