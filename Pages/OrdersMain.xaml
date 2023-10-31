@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:StasIvanExKitchen.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="1200"
-      Title="OrdersMain" IsVisibleChanged="Page_IsVisibleChanged">
+      Title="Заказы" IsVisibleChanged="Page_IsVisibleChanged">
     
     <Grid>
         <Grid.ColumnDefinitions>

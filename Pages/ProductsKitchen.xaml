@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:StasIvanExKitchen.Pages" xmlns:sys="clr-namespace:System;assembly=mscorlib"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="1200"
-      Title="ProductsKitchen" IsVisibleChanged="Page_IsVisibleChanged">
+      Title="Товары" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Page.Resources>
         <sys:String x:Key="NullImage">
