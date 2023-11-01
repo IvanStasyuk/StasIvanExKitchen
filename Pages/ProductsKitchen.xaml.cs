@@ -40,19 +40,15 @@ namespace StasIvanExKitchen.Pages
                     {
                         case 1:
                             btnAdd.IsEnabled = true;
-                            btnAdd.ToolTip = "У вас нет прав";
                             btnDelete.IsEnabled = true;
-                            btnDelete.ToolTip = "У вас нет прав";
                             break;
                         case 2:
                             btnAdd.IsEnabled = false;
                             btnAdd.ToolTip = "У вас нет прав";
                             btnDelete.IsEnabled = true;
-                            btnDelete.ToolTip = "У вас нет прав";
                             break;
                         case 3:
                             btnAdd.IsEnabled = true;
-                            btnAdd.ToolTip = "У вас нет прав";
                             btnDelete.IsEnabled = false;
                             btnDelete.ToolTip = "У вас нет прав";
                             break;
