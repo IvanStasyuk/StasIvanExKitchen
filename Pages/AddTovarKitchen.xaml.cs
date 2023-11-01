@@ -26,6 +26,8 @@ namespace StasIvanExKitchen.Pages
         {
             InitializeComponent();
             DataContext = AddingTovar;
+            int.Parse(MaxDiscountAddBox.Text);
+            int.Parse(DiscountAmountAddBox.Text);
         }
 
         private void SavebtnTovar_Click(object sender, RoutedEventArgs e)
